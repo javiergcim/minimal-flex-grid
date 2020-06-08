@@ -1,0 +1,17 @@
+body {
+  color: #fff;
+}
+
+div.f-container {
+  background-color: #ddd;
+}
+
+div.f-col {
+  background-color: #777;
+}
+
+#page-body {
+  width: 100%;
+  margin: auto;
+  background-color: #333;
+}

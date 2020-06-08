@@ -1,0 +1,202 @@
+// Minimal Flex Grid
+
+// VARIABLES ---
+
+// Configurable column paddings
+
+$col-padding: 1em;
+
+// Configurable sizes
+
+$sm: 576px;  // small
+$md: 768px;  // medium
+$lg: 992px;  // large
+$xl: 1200px;  // extra large
+
+// Globals
+
+$columns: 12;
+
+// Golden ratio
+
+$g_ratio: 0.61803398874988;
+
+// MAIN ELEMENTS
+
+div.f-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+div.f-col {
+  box-sizing: border-box;
+  flex: 1 1 auto;
+  margin: 0;
+  padding: $col-padding;
+}
+
+// ALIGNMENTS
+
+div.f-vcenter {
+  align-items: center;
+}
+
+div.f-vtop {
+  align-items: flex-start;
+}
+
+div.f-vbottom {
+  align-items: flex-end;
+}
+
+div.f-vbase {
+  align-items: baseline;
+}
+
+// ALL SIZES
+
+@for $i from 1 through $columns {
+  div.f-col-#{$i} {
+    width: ($i * 100%) / $columns;
+  }
+
+  div.f-col-#{$i}.f-constrained {
+    max-width: ($i * 100%) / $columns;
+  }
+}
+
+div.f-col-golden {
+  width: $g_ratio * 100%;
+}
+
+div.f-col-golden.f-constrained {
+  max-width: $g_ratio * 100%;
+}
+
+div.f-col-goldenc {
+  width: (1 - $g_ratio) * 100%;
+}
+
+div.f-col-goldenc.f-constrained {
+  max-width: (1 - $g_ratio) * 100%;
+}
+
+// SIZE: sm (small)
+
+@media (min-width: $sm) {
+  @for $i from 1 through $columns {
+    div.f-col-sm-#{$i} {
+      width: ($i * 100%) / $columns;
+    }
+
+    div.f-col-sm-#{$i}.f-constrained {
+      max-width: ($i * 100%) / $columns;
+    }
+  }
+
+  div.f-col-sm-golden {
+    width: $g_ratio * 100%;
+  }
+
+  div.f-col-sm-golden.f-constrained {
+    max-width: $g_ratio * 100%;
+  }
+
+  div.f-col-sm-goldenc {
+    width: (1 - $g_ratio) * 100%;
+  }
+
+  div.f-col-sm-goldenc.f-constrained {
+    max-width: (1 - $g_ratio) * 100%;
+  }
+}
+
+// SIZE: md (medium)
+
+@media (min-width: $md) {
+  @for $i from 1 through $columns {
+    div.f-col-md-#{$i} {
+      width: ($i * 100%) / $columns;
+    }
+
+    div.f-col-md-#{$i}.f-constrained {
+      max-width: ($i * 100%) / $columns;
+    }
+  }
+
+  div.f-col-md-golden {
+    width: $g_ratio * 100%;
+  }
+
+  div.f-col-md-golden.f-constrained {
+    max-width: $g_ratio * 100%;
+  }
+
+  div.f-col-md-goldenc {
+    width: (1 - $g_ratio) * 100%;
+  }
+
+  div.f-col-md-goldenc.f-constrained {
+    max-width: (1 - $g_ratio) * 100%;
+  }
+}
+
+// SIZE: lg (large)
+
+@media (min-width: $lg) {
+  @for $i from 1 through $columns {
+    div.f-col-lg-#{$i} {
+      width: ($i * 100%) / $columns;
+    }
+
+    div.f-col-lg-#{$i}.f-constrained {
+      max-width: ($i * 100%) / $columns;
+    }
+  }
+
+  div.f-col-lg-golden {
+    width: $g_ratio * 100%;
+  }
+
+  div.f-col-lg-golden.f-constrained {
+    max-width: $g_ratio * 100%;
+  }
+
+  div.f-col-lg-goldenc {
+    width: (1 - $g_ratio) * 100%;
+  }
+
+  div.f-col-lg-goldenc.f-constrained {
+    max-width: (1 - $g_ratio) * 100%;
+  }
+}
+
+// SIZE: xl (extra large)
+
+@media (min-width: $lg) {
+  @for $i from 1 through $columns {
+    div.f-col-xl-#{$i} {
+      width: ($i * 100%) / $columns;
+    }
+
+    div.f-col-xl-#{$i}.f-constrained {
+      max-width: ($i * 100%) / $columns;
+    }
+  }
+
+  div.f-col-xl-golden {
+    width: $g_ratio * 100%;
+  }
+
+  div.f-col-xl-golden.f-constrained {
+    max-width: $g_ratio * 100%;
+  }
+
+  div.f-col-xl-goldenc {
+    width: (1 - $g_ratio) * 100%;
+  }
+
+  div.f-col-xl-goldenc.f-constrained {
+    max-width: (1 - $g_ratio) * 100%;
+  }
+}
