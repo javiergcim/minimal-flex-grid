@@ -4,7 +4,10 @@
 
 // Configurable column paddings
 
-$col-padding: 1em;
+$col-pad-top: .5em;
+$col-pad-right: .5em;
+$col-pad-bottom: .5em;
+$col-pad-left: .5em;
 
 // Configurable sizes
 
@@ -26,13 +29,14 @@ $g_ratio: 0.61803398874988;
 div.f-container {
   display: flex;
   flex-wrap: wrap;
+  margin-left: -$col-pad-left;
 }
 
 div.f-col {
   box-sizing: border-box;
   flex: 1 1 auto;
   margin: 0;
-  padding: $col-padding;
+  padding: $col-pad-top $col-pad-left $col-pad-bottom $col-pad-left;
 }
 
 // ALIGNMENTS
