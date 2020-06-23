@@ -11,13 +11,6 @@ div.f-col {
   border: 1px solid red;
 }
 
-.son {
-  margin: 1em auto 1em auto;
-  height: 100% - 1em;
-  width: 200px;
-  border: 1px solid blue;
-}
-
 #page-body {
   width: 100%;
   margin: auto;
